@@ -1,0 +1,549 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "New Amsterdam", sans-serif;
+}
+html, body {width: auto!important; overflow-x: hidden!important}
+
+
+@media (min-width: 320px) {
+    /***button***/
+.button-15 {
+  --b: 3px; 
+  --s: .45em; 
+  --color: #d2dcf1;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-15:hover,
+.button-15:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-15:active {
+  background: var(--color);
+  color: #fff;
+}
+/***button-end***/
+
+    .header-div{
+        margin-top: 3.5rem;
+        width: 100%;
+        height: fit-content;
+        background: linear-gradient(to top, #E0EEF5,#E0EEF5,#ffffff);
+        
+    }
+    .navbar{
+        background: #04171F;
+    }
+    .navbar-brand{
+        font-weight: bold;
+        font-family: "Pacifico", cursive;
+        font-size: 5rem;
+    }
+    .intro small{
+        padding: 0.5rem;
+        color: #6a4911;
+    }
+    .intro strong{
+        padding: 1.2rem;
+        color: #04171F;
+        font-size: x-small;
+    }
+    .intro{
+        padding: 0.5rem;
+    }
+    .intro h4{
+        font-weight: bold;
+        color: #04171F;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .animation-intro{
+        background-image: url('images/phoenix.webp');
+        background-position: bottom;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 6rem;
+        margin-bottom: 2rem;
+    }
+    .animation-slicer-intro{
+        height: fit-content;
+        text-align: center;
+        padding-bottom: 0.25rem;
+        justify-content: center;
+    }
+    .dev-icons{
+        height: fit-content;
+        width: 60px;
+        aspect-ratio: 1;
+        border-radius: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    .dev-icons img{
+        height: 50px;
+        width: 50px;
+        border-radius: 25%;
+    }
+    .animation-top{
+        background: #ffffff;
+        height: 1.5rem;
+        border-top: 0.2rem solid #6a4911;
+        border-bottom: 0.2rem solid #6a4911;
+        width: 110%;
+        transform: translateX(-5%);
+    }
+    /*****************/
+    /*****************/
+    .card{
+        height: 20rem !important;
+        overflow: hidden;
+    }
+    .project-info .card{
+        background: #04171F;
+    }
+    .app-external-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        background: #04171F;
+        width: 150%;
+        transform: translateX(-17.5%);
+   }
+    .app-external-btns a{
+        font-size: 0.7rem;
+   }
+   
+    .feature-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .feature-content p{
+        font-size: 0.8rem;
+    }
+    .tech-div{
+        width: 150%;
+        transform: translateX(-17.5%);
+        text-align: center;
+        background: #ffffff;
+        color: #6a4911;
+    }
+    .tech-div h5{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    .tech-div p:first-child(){
+        
+        margin-top: -55rem;
+    }
+    .tech-div p{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    form{
+        background: #04171F;
+        padding: 0.5rem;
+    }
+    footer .container{
+        background: #04171F;
+        text-align: center;
+    }
+    footer .container p{
+        font-size: 0.9rem;
+        color: #ffffff;
+    }
+
+}
+@media (min-width: 375px) {
+    /***header/nav***/
+    .intro strong{
+        padding: 1.3rem;
+        font-size: small;
+    }
+    .navbar-brand{
+        font-size: 6.25rem;
+    }
+    .intro small{
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    .intro{
+        padding: 0.6rem;
+    }
+    .intro h4{
+        font-size: 1.3rem;
+        padding: 1.6rem;
+    }
+    .animation-intro{
+        height: 7rem;
+    }
+    /***tech***/
+    .animation-slicer-intro{
+        padding-bottom: 0.30rem;
+    }
+    .dev-icons{
+        width: 70px;
+    }
+    .dev-icons img{
+        height: 55px;
+        width: 55px;
+    }
+    .animation-top{
+        height: 1.6rem;
+        border-top: 0.2rem solid #6a4911;
+        border-bottom: 0.2rem solid #6a4911;
+    }    
+    /***projects***/
+    .card{
+        height: 22rem !important;
+    }
+    .app-external-btns a{
+        font-size: 0.8rem;
+   }
+    .feature-content p{
+        font-size: 0.9rem;
+    }
+    .tech-div h5{
+        font-size: 1.1rem;
+    }
+    .tech-div p{
+        font-size: 0.9rem;
+    }
+    /***footer***/
+    form{
+        padding: 0.6rem;
+    }
+    footer .container p{
+        font-size: 1rem;
+    }
+}
+@media (min-width: 425px) {
+    /***header/nav***/
+    .intro strong{
+        padding: 1.4rem;
+        font-size: small;
+    }
+    .navbar-brand{
+        font-size: 6.5rem;
+    }
+    .intro small{
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+    .intro{
+        padding: 0.7rem;
+    }
+    .intro h4{
+        font-size: 1.4rem;
+        padding: 1.7rem;
+    }
+    .animation-intro{
+        height: 8rem;
+    }
+    /***tech***/
+    .animation-slicer-intro{
+        padding-bottom: 0.35rem;
+    }
+    .animation-slicer-intro h3{
+        font-size: 1.5rem;
+    }
+    .dev-icons{
+        width: 80px;
+    }
+    .dev-icons img{
+        height: 60px;
+        width: 60px;
+    }
+    .animation-top{
+        height: 1.7rem;
+        border-top: 0.3rem solid #6a4911;
+        border-bottom: 0.3rem solid #6a4911;
+    }    
+    /***projects***/
+    .card{
+        height: 24rem !important;
+    }
+    .app-external-btns a{
+        font-size: 0.9rem;
+   }
+    .feature-content p{
+        font-size: 1rem;
+    }
+    .tech-div h5{
+        font-size: 1.2rem;
+    }
+    .tech-div p{
+        font-size: 1rem;
+    }
+    /***footer***/
+    form{
+        padding: 0.7rem;
+    }
+    footer .container p{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media (min-width: 510px) {
+        /***header/nav***/
+        .intro strong{
+            padding: 1.6rem;
+            font-size: small;
+        }
+        .navbar-brand{
+            font-size: 6.7rem;
+        }
+        .intro small{
+            padding: 0.9rem;
+            font-size: 1.2rem;
+        }
+        .intro{
+            padding: 0.9rem;
+        }
+        .intro h4{
+            font-size: 1.6rem;
+            padding: 1.9rem;
+        }
+        .animation-intro{
+            height: 8.5rem;
+        }
+        /***tech***/
+        .animation-slicer-intro{
+            padding-bottom: 0.4rem;
+        }
+        .animation-slicer-intro h3{
+            font-size: 1.7rem;
+        }
+        .dev-icons{
+            width: 80px;
+        }
+        .dev-icons img{
+            height: 60px;
+            width: 60px;
+        }
+        .animation-top{
+            height: 1.7rem;
+            border-top: 0.4rem solid #6a4911;
+            border-bottom: 0.3rem solid #6a4911;
+        }    
+        /***projects***/
+        .card{
+            height: 25rem !important;
+        }
+        .app-external-btns a{
+            font-size: 0.9rem;
+       }
+        .feature-content p{
+            font-size: 1rem;
+        }
+        .tech-div h5{
+            font-size: 1.2rem;
+        }
+        .tech-div p{
+            font-size: 1rem;
+        }
+        /***footer***/
+        form{
+            padding: 0.7rem;
+        }
+        footer .container p{
+            font-size: 1.1rem;
+        }
+}
+@media (min-width: 768px) {
+        /***header/nav***/
+        .header-div{
+            margin-bottom: 3rem;
+        }
+        .intro strong{
+            padding: 1.8rem;
+            font-size: small;
+        }
+        .navbar-brand{
+            font-size: 7rem;
+        }
+        .intro small{
+            padding: 1.1rem;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+        }
+        .intro{
+            padding: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        .intro h4{
+            font-size: 2rem;
+            padding: 1.1rem;
+        }
+        .animation-intro{
+            height: 9rem;
+        }
+        /***tech***/
+        .animation-slicer-intro{
+            padding-bottom: 0.8rem;
+        }
+        .animation-slicer-intro h3{
+            font-size: 1.8rem;
+        }
+        .dev-icons{
+            width: 80px;
+        }
+        .dev-icons img{
+            height: 70px;
+            width: 70px;
+        }
+        .animation-top{
+            height: 1.9rem;
+            border-top: 0.3rem solid #6a4911;
+            border-bottom: 0.3rem solid #6a4911;
+        }    
+        /***projects***/
+        .projects-area{
+            margin-bottom: 3rem;
+        }
+        .card{
+            height: 32rem !important;
+        }
+        .app-external-btns a{
+            font-size: 1.1rem;
+       }
+        .feature-content p{
+            font-size: 1.2rem;
+        }
+        .tech-div h5{
+            font-size: 1.4rem;
+        }
+        .tech-div p{
+            font-size: 1.2rem;
+        }
+        .contact-area{
+            margin-bottom: 3rem;
+        }
+        /***footer***/
+        form{
+            padding: 0.9rem;
+            border-radius: 0.5rem;
+        }
+        footer .container p{
+            font-size: 1.2rem;
+        }
+}
+@media (min-width: 992px) {
+        /***header/nav***/
+        .header-div{
+            margin-bottom: 3rem;
+        }
+        .intro strong{
+            padding: 1.8rem;
+            font-size: small;
+        }
+        .navbar-brand{
+            font-size: 7rem;
+        }
+        .intro small{
+            padding: 1.1rem;
+            font-size: 1.4rem;
+            margin-top: 3rem;
+        }
+        .intro{
+            padding: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        .intro h4{
+            font-size: 2rem;
+            padding: 1.1rem;
+        }
+        .animation-intro{
+            height: 9rem;
+        }
+        /***tech***/
+        .animation-slicer-intro{
+            padding-bottom: 0.8rem;
+        }
+        .animation-slicer-intro h3{
+            font-size: 1.8rem;
+        }
+        .dev-icons{
+            width: 80px;
+        }
+        .dev-icons img{
+            height: 70px;
+            width: 70px;
+        }
+        .animation-top{
+            height: 1.9rem;
+            border-top: 0.3rem solid #6a4911;
+            border-bottom: 0.3rem solid #6a4911;
+        }    
+        /***projects***/
+        .projects-area{
+            margin-bottom: 3rem;
+        }
+        .card{
+            height: 26rem !important;
+            position: relative;
+        }
+        .project-display .card .card-body{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .app-external-btns a{
+            font-size: 1.1rem;
+       }
+        .feature-content p{
+            font-size: 1.2rem;
+        }
+        .tech-div h5{
+            font-size: 1.4rem;
+        }
+        .tech-div p{
+            font-size: 1.2rem;
+        }
+        .contact-area{
+            margin-bottom: 3rem;
+        }
+        /***footer***/
+        form{
+            padding: 0.9rem;
+            border-radius: 0.5rem;
+        }
+        footer .container p{
+            font-size: 1.2rem;
+        }
+}
+
+@media (min-width: 1440px) {
+ 
+}
