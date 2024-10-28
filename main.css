@@ -10,7 +10,6 @@
 }
 html, body {width: auto!important; overflow-x: hidden!important}
 
-
 @media (min-width: 320px) {
     /***button***/
 .button-15 {
@@ -21,16 +20,13 @@ html, body {width: auto!important; overflow-x: hidden!important}
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  background : conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+                var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .6em;
   font-size: 16px;
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -50,51 +46,76 @@ html, body {width: auto!important; overflow-x: hidden!important}
 /***button-end***/
 
     .header-div{
-        margin-top: 3.5rem;
+        margin-top: 6rem;
         width: 100%;
         height: fit-content;
-        background: linear-gradient(to top, #E0EEF5,#E0EEF5,#ffffff);
-        
+        background: linear-gradient(to top, #037171,#ffffff,#ffffff);
     }
     .navbar{
-        background: #04171F;
+        background: #000;
+    }
+    .nav-link{
+        color: white !important;
+    }
+    .nav-link:hover{
+        color: rgb(107, 107, 107) !important;
+    }
+    .disabled{
+        color: rgb(107, 107, 107) !important;
     }
     .navbar-brand{
         font-weight: bold;
         font-family: "Pacifico", cursive;
-        font-size: 5rem;
+        font-size: 2.5rem !important;
     }
     .intro small{
         padding: 0.5rem;
-        color: #6a4911;
+        color: #037171;
     }
     .intro strong{
         padding: 1.2rem;
-        color: #04171F;
+        margin-top: 40px;
+        color: #000;
         font-size: x-small;
+        letter-spacing: 5px;
     }
     .intro{
         padding: 0.5rem;
     }
-    .intro h4{
+    .intro-section h3{
         font-weight: bold;
-        color: #04171F;
+        color: #037171;
+        letter-spacing: 5px;
         padding: 1.5rem;
         text-align: center;
+        text-shadow: 
+        2px 2px 5px #a1a1a118, /* First shadow (offset down-right) */
+        4px 4px 10px #afafaf52; /* Second shadow for more depth */
     }
-    .animation-intro{
-        background-image: url('images/phoenix.webp');
-        background-position: bottom;
-        background-size: cover;
-        background-attachment: fixed;
-        height: 6rem;
-        margin-bottom: 2rem;
-    }
+    
     .animation-slicer-intro{
         height: fit-content;
         text-align: center;
         padding-bottom: 0.25rem;
         justify-content: center;
+    }
+    .big-header-text{
+        height: 140px;
+    }
+    .big-header-info{
+        font-size: 20px;
+        margin-bottom: 50px;
+        width: 100%;
+        transform: scale(0) translateY(50%);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .big-header-info.show{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    .text{
+        font-size: 35px;
     }
     .dev-icons{
         height: fit-content;
@@ -105,20 +126,38 @@ html, body {width: auto!important; overflow-x: hidden!important}
         justify-content: center;
         align-items: center;
         background: rgb(255, 255, 255);
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        box-shadow: #32325d40 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #0a254059 0px -2px 6px 0px inset;
+        transition: all 0.3s ease-in;
+    }
+    .dev-icons:hover:nth-child(n+1){
+        transform: rotateZ(35deg) scale(0.85);
+    }
+    .dev-icons:hover:nth-child(4n-1){
+        transform: rotateZ(-35deg) scale(0.85);
+    }
+    .dev-icons:nth-child(2n+1){
+        transform: translate(75%, 100%) rotate(-35deg);
+    }
+    .dev-icons:nth-child(4n-1){
+        transform: translate(-75%, 75%) rotate(35deg);
+    }
+    .dev-icons.animate{
+        transform: translateX(0%);
+        opacity: 1;
     }
     .dev-icons img{
         height: 50px;
         width: 50px;
         border-radius: 25%;
     }
+
     .animation-top{
-        background: #ffffff;
-        height: 1.5rem;
-        border-top: 0.2rem solid #6a4911;
-        border-bottom: 0.2rem solid #6a4911;
-        width: 110%;
-        transform: translateX(-5%);
+        background: #FBFEF9;
+        height: 1.3rem;
+        border-top: 0.2rem solid #000;
+        border-bottom: 0.2rem solid #000;
+        width: 150%;
+        transform: translateX(-25%);
     }
     /*****************/
     /*****************/
@@ -127,14 +166,14 @@ html, body {width: auto!important; overflow-x: hidden!important}
         overflow: hidden;
     }
     .project-info .card{
-        background: #04171F;
+        background: #141414;
     }
     .app-external-btns{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        background: #04171F;
+        background: #141414;
         width: 150%;
         transform: translateX(-17.5%);
    }
@@ -153,8 +192,8 @@ html, body {width: auto!important; overflow-x: hidden!important}
         width: 150%;
         transform: translateX(-17.5%);
         text-align: center;
-        background: #ffffff;
-        color: #6a4911;
+        background: #FBFEF9;
+        color: #000;
     }
     .tech-div h5{
         font-size: 1rem;
@@ -171,16 +210,16 @@ html, body {width: auto!important; overflow-x: hidden!important}
         margin: 0;
     }
     form{
-        background: #04171F;
+        background: #141414;
         padding: 0.5rem;
     }
     footer .container{
-        background: #04171F;
+        background: #141414;
         text-align: center;
     }
     footer .container p{
         font-size: 0.9rem;
-        color: #ffffff;
+        color: #FBFEF9;
     }
 
 }
@@ -200,12 +239,9 @@ html, body {width: auto!important; overflow-x: hidden!important}
     .intro{
         padding: 0.6rem;
     }
-    .intro h4{
+    .intro-section h3{
         font-size: 1.3rem;
         padding: 1.6rem;
-    }
-    .animation-intro{
-        height: 7rem;
     }
     /***tech***/
     .animation-slicer-intro{
@@ -220,8 +256,8 @@ html, body {width: auto!important; overflow-x: hidden!important}
     }
     .animation-top{
         height: 1.6rem;
-        border-top: 0.2rem solid #6a4911;
-        border-bottom: 0.2rem solid #6a4911;
+        border-top: 0.2rem solid #000;
+        border-bottom: 0.2rem solid #000;
     }    
     /***projects***/
     .card{
@@ -263,18 +299,16 @@ html, body {width: auto!important; overflow-x: hidden!important}
     .intro{
         padding: 0.7rem;
     }
-    .intro h4{
+    .intro-section h3{
         font-size: 1.4rem;
         padding: 1.7rem;
     }
-    .animation-intro{
-        height: 8rem;
-    }
+
     /***tech***/
     .animation-slicer-intro{
         padding-bottom: 0.35rem;
     }
-    .animation-slicer-intro h3{
+    .animation-slicer-intro-section h3{
         font-size: 1.5rem;
     }
     .dev-icons{
@@ -286,8 +320,8 @@ html, body {width: auto!important; overflow-x: hidden!important}
     }
     .animation-top{
         height: 1.7rem;
-        border-top: 0.3rem solid #6a4911;
-        border-bottom: 0.3rem solid #6a4911;
+        border-top: 0.3rem solid #000;
+        border-bottom: 0.3rem solid #000;
     }    
     /***projects***/
     .card{
@@ -331,18 +365,15 @@ html, body {width: auto!important; overflow-x: hidden!important}
         .intro{
             padding: 0.9rem;
         }
-        .intro h4{
+        .intro-section h3{
             font-size: 1.6rem;
             padding: 1.9rem;
-        }
-        .animation-intro{
-            height: 8.5rem;
         }
         /***tech***/
         .animation-slicer-intro{
             padding-bottom: 0.4rem;
         }
-        .animation-slicer-intro h3{
+        .animation-slicer-intro-section h3{
             font-size: 1.7rem;
         }
         .dev-icons{
@@ -354,8 +385,8 @@ html, body {width: auto!important; overflow-x: hidden!important}
         }
         .animation-top{
             height: 1.7rem;
-            border-top: 0.4rem solid #6a4911;
-            border-bottom: 0.3rem solid #6a4911;
+            border-top: 0.4rem solid #000;
+            border-bottom: 0.3rem solid #000;
         }    
         /***projects***/
         .card{
@@ -402,18 +433,15 @@ html, body {width: auto!important; overflow-x: hidden!important}
             padding: 1.1rem;
             margin-bottom: 3rem;
         }
-        .intro h4{
+        .intro-section h3{
             font-size: 2rem;
             padding: 1.1rem;
-        }
-        .animation-intro{
-            height: 9rem;
         }
         /***tech***/
         .animation-slicer-intro{
             padding-bottom: 0.8rem;
         }
-        .animation-slicer-intro h3{
+        .animation-slicer-intro-section h3{
             font-size: 1.8rem;
         }
         .dev-icons{
@@ -425,8 +453,8 @@ html, body {width: auto!important; overflow-x: hidden!important}
         }
         .animation-top{
             height: 1.9rem;
-            border-top: 0.3rem solid #6a4911;
-            border-bottom: 0.3rem solid #6a4911;
+            border-top: 0.3rem solid #000;
+            border-bottom: 0.3rem solid #000;
         }    
         /***projects***/
         .projects-area{
@@ -465,7 +493,7 @@ html, body {width: auto!important; overflow-x: hidden!important}
             margin-bottom: 3rem;
         }
         .intro strong{
-            padding: 1.8rem;
+            padding: 1.5rem;
             font-size: small;
         }
         .navbar-brand{
@@ -473,38 +501,51 @@ html, body {width: auto!important; overflow-x: hidden!important}
         }
         .intro small{
             padding: 1.1rem;
-            font-size: 1.4rem;
+            font-size: 3rem;
             margin-top: 3rem;
         }
         .intro{
             padding: 1.1rem;
             margin-bottom: 3rem;
         }
-        .intro h4{
-            font-size: 2rem;
+        .intro-section h3{
+            font-size: 4rem;
             padding: 1.1rem;
         }
-        .animation-intro{
-            height: 9rem;
+        .big-header-text{
+            min-height: 200px;
+        }
+        .big-header-info h5{
+            font-size: 30px;
+        }
+        .text{
+            font-size: 80px;
         }
         /***tech***/
         .animation-slicer-intro{
             padding-bottom: 0.8rem;
         }
-        .animation-slicer-intro h3{
-            font-size: 1.8rem;
+        .animation-slicer-intro-section h3{
+            font-size: 2.3rem;
         }
         .dev-icons{
             width: 80px;
+            opacity: 0;
+        }
+        .dev-icons.animate{
+            transform: translateX(0%) scale(0.75);
+            opacity: 1;
         }
         .dev-icons img{
-            height: 70px;
-            width: 70px;
+            height: 75px;
+            width: 75px;
         }
         .animation-top{
-            height: 1.9rem;
-            border-top: 0.3rem solid #6a4911;
-            border-bottom: 0.3rem solid #6a4911;
+            height: .5rem;
+            width: 150%;
+            transform: translateX(-25%);
+            border-top: 0.3rem solid #000;
+            border-bottom: 0.3rem solid #000;
         }    
         /***projects***/
         .projects-area{
@@ -538,6 +579,9 @@ html, body {width: auto!important; overflow-x: hidden!important}
         form{
             padding: 0.9rem;
             border-radius: 0.5rem;
+        }
+        .about{
+            font-size: 18px;
         }
         footer .container p{
             font-size: 1.2rem;
