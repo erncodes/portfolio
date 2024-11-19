@@ -15,7 +15,7 @@ html, body {width: auto!important; overflow-x: hidden!important}
 .button-15 {
   --b: 3px; 
   --s: .45em; 
-  --color: #d2dcf1;
+  --color: #000000;
   
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
@@ -166,16 +166,20 @@ html, body {width: auto!important; overflow-x: hidden!important}
         overflow: hidden;
     }
     .project-info .card{
-        background: #141414;
+        background: #000000;
+    }
+    .card-img-top{
+        filter: blur(4px);
+        transition: all 0.5s ease;
+    }
+    .card-img-top:hover{
+        filter: blur(0px);
     }
     .app-external-btns{
+        background: #ffffff00;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        background: #141414;
-        width: 150%;
-        transform: translateX(-17.5%);
+        justify-content: center;
    }
     .app-external-btns a{
         font-size: 0.7rem;
@@ -210,7 +214,8 @@ html, body {width: auto!important; overflow-x: hidden!important}
         margin: 0;
     }
     form{
-        background: #141414;
+        background: #ffffff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         padding: 0.5rem;
     }
     footer .container{
@@ -559,6 +564,10 @@ html, body {width: auto!important; overflow-x: hidden!important}
             position: absolute;
             bottom: 0;
             left: 0;
+            border-radius: 5px;
+            background: #ffffff;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
         }
         .app-external-btns a{
             font-size: 1.1rem;
