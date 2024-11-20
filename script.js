@@ -68,3 +68,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typeMessage(messages[index]);
 });
+
+let myform = document.getElementById("myform");
+let submitBTN = document.getElementById("submitBTN");
+
+submitBTN.addEventListener('click',()=>{
+    myform.submit();
+    myform.reset();
+})

@@ -248,7 +248,7 @@
                     </div>
                     <hr>
 
-                    <div class="col-6 project-info px-lg-5 px-1">
+                  <!--  <div class="col-6 project-info px-lg-5 px-1">
                         <div class="card text-white mb-3">
                             <div class="card-header">Project info</div>
                             <div class="card-body">
@@ -294,6 +294,7 @@
                             </div>
                           </div>
                     </div>
+                    -->
                 </div>
             </div>
             <hr>
@@ -301,25 +302,25 @@
                 <div class="row text-center">
                     <h3>Let's work together</h3>
                     <div class="col-sm-12 col-md-6" >
-                        <form>
+                        <form id="myform" action="https://formspree.io/f/xleynnew" method="POST">
                             <div class="form-group row mb-3">
                                 <div class="col-12">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
                                   </div>
                               </div>
                               <div class="form-group row mb-3">
                                 <div class="col-12">
-                                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                  <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email">
                                 </div>
                               </div>
                           <div class="form-group row  mb-3">
                             <div class="col-12">
-                              <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                              <textarea class="form-control" name="message" id="message" rows="4" placeholder="Your Message" required></textarea>
                             </div>
                           </div>
                           <div class="form-group row mb-3">
                             <div class="col-12">
-                             <a type="submit" class="button-15">Send Message</a>
+                             <button type="button" class="button-15" id="submitBTN">Send Message</button>
                             </div>
                           </div>
                         </form>
